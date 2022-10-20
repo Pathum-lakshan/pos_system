@@ -27,7 +27,6 @@ public class UserService {
 
   public UserDTO isUserExists(String username, String password) {
     User userByUsername = userRepo.getUserByUsername(username, password);
-
     if (userByUsername != null) {
       return modelMapper.map(userByUsername, UserDTO.class);
     } else {
