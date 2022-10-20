@@ -27,5 +27,8 @@ public class UserService {
     @Autowired
     private ModelMapper modelMapper;
 
+    public UserDTO isUserExists(String username){
+    return   modelMapper.map(userRepo.getUserByUserID(username),UserDTO.class);
+    }
 
 }

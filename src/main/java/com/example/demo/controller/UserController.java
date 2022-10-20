@@ -14,4 +14,8 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+  @GetMapping("/login")
+  public boolean testRequestParams (@RequestParam(value = "username") String username , @RequestParam(value = "password") String password){
+    return userService.isUserExists(username).getPassword().equals(password);
+  }
 }

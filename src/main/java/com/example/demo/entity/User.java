@@ -15,5 +15,5 @@ public class User {
     @Id
     private int id;
     private String name;
-    private String address , contact , nic;
+    private String address , contact , nic , password;
 }
