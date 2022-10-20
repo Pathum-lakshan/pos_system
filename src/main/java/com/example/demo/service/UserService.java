@@ -4,12 +4,10 @@ import com.example.demo.dto.UserDTO;
 import com.example.demo.entity.User;
 import com.example.demo.repo.UserRepo;
 import org.modelmapper.ModelMapper;
-import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-import java.util.List;
 
 /**
  * ALE IS TER
@@ -22,13 +20,20 @@ import java.util.List;
 @Service
 @Transactional
 public class UserService {
-    @Autowired
-    private UserRepo userRepo;
-    @Autowired
-    private ModelMapper modelMapper;
+  @Autowired
+  private UserRepo userRepo;
+  @Autowired
+  private ModelMapper modelMapper;
 
-    public UserDTO isUserExists(String username){
-    return   modelMapper.map(userRepo.getUserByUserID(username),UserDTO.class);
+  public UserDTO isUserExists(String username, String password) {
+    User userByUsername = userRepo.getUserByUsername(username, password);
+
+    if (userByUsername != null) {
+      return modelMapper.map(userByUsername, UserDTO.class);
+    } else {
+      return new UserDTO();
     }
+
+  }
 
 }

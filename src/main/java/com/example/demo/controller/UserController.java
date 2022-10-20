@@ -5,7 +5,7 @@ import com.example.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+
 
 @RestController
 @RequestMapping(value = "api/v1/user")
@@ -15,7 +15,7 @@ public class UserController {
     private UserService userService;
 
   @GetMapping("/login")
-  public boolean testRequestParams (@RequestParam(value = "username") String username , @RequestParam(value = "password") String password){
-    return userService.isUserExists(username).getPassword().equals(password);
+  public UserDTO testRequestParams (@RequestParam(value = "username",required = false) String username , @RequestParam(value = "password",required = false) String password){
+    return userService.isUserExists(username,password);
   }
 }
