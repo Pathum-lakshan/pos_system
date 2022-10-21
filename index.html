@@ -5,22 +5,17 @@
   <meta charset="utf-8">
   <title>pos system</title>
   <meta name="description" content="pos system">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Place favicon.ico in the root directory -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" rel="stylesheet"
         type="text/css"/>
   <link href="css/nucleo-svg.css" rel="stylesheet"/>
-  <link href="css/nucleo-svg.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
   <link href="css/material-dashboard.css?v=3.0.4" id="pagestyle" rel="stylesheet"/>
-
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body id="lord_for_dashboard" class="g-sidenav-show  bg-gray-100 ">
-<section class="vh-100 " style="display: block" id="login">
+<body  class="g-sidenav-show  bg-gray-100 ">
+<section class="vh-100 " style="display: none" id="login">
   <div class="container py-5 h-100" id="rm">
     <div class="row d-flex align-items-center justify-content-center h-100">
       <div class="col-md-8 col-lg-7 col-xl-6">
@@ -50,7 +45,7 @@
     </div>
   </div>
 </section>
-<section class="vh-100 "  style="display: none" id="dashboard">
+<section   style="display: block" id="system">
   <aside
     class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark"
     id="sidenav-main">
@@ -59,7 +54,7 @@
          class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
          id="iconSidenav"></i>
       <a class="navbar-brand m-0" target="_blank">
-        <img alt="main_logo" class="navbar-brand-img h-100" src="../assert/img/icons8-dashboard-64.png">
+        <img alt="main_logo" class="navbar-brand-img h-100" src="img/icons8-dashboard-64.png">
         <span class="ms-1 font-weight-bold text-white">P O S SYSTEM</span>
       </a>
     </div>
@@ -181,9 +176,8 @@
     </div>
   </aside>
   <main class="main-content border-radius-lg  ">
-
-    <nav class="navbar mt-3    navbar-main navbar-dark bg-gradient-dark navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl"
-         id="navbarBlur" style="position: fixed ; width: 83%; z-index: 3">
+    <nav class="navbar     navbar-main navbar-dark bg-gradient-dark navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl z-index-0"
+         id="navbarBlur">
       <div class="container-fluid py-1 px-3">
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -227,7 +221,7 @@
                   <a class="dropdown-item border-radius-md" href="#">
                     <div class="d-flex py-1">
                       <div class="my-auto">
-                        <img class="avatar avatar-sm  me-3 " src="../assert/img/team-2.jpg" alt="">
+                        <img class="avatar avatar-sm  me-3 " src="img/team-2.jpg" alt="">
                       </div>
                       <div class="d-flex flex-column justify-content-center">
                         <h6 class="text-sm font-weight-normal mb-1">
@@ -246,7 +240,7 @@
                     <div class="d-flex py-1">
                       <div class="my-auto">
                         <img class="avatar avatar-sm bg-gradient-dark  me-3 "
-                             src="../assert/img/small-logos/logo-spotify.svg" alt="">
+                             src="img/small-logos/logo-spotify.svg" alt="">
                       </div>
                       <div class="d-flex flex-column justify-content-center">
                         <h6 class="text-sm font-weight-normal mb-1">
@@ -300,7 +294,6 @@
         </div>
       </div>
     </nav>
-
     <main id="dashboard" style="display:block" class="main-content border-radius-lg mt-7  ">
       <section class="d-flex flex-row mt-7">
         <div class="flex-fill p-3">
@@ -943,7 +936,7 @@
                 <div class="row pt-3">
                   <div class="col">
                     <div class="card card-body border  border-radius-lg d-flex align-items-center flex-row">
-                      <img alt="logo" class="w-10 me-3 mb-0" src="../assert/img/logos/mastercard.png">
+                      <img alt="logo" class="w-10 me-3 mb-0" src="img/logos/mastercard.png">
                       <h6 class="mb-0">****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;7852</h6>
                       <i class="material-icons ms-auto text-dark cursor-pointer" data-bs-placement="top"
                          data-bs-toggle="tooltip" title="Edit Card">edit</i>
@@ -951,7 +944,7 @@
                   </div>
                   <div class="col">
                     <div class="card card-body border  border-radius-lg d-flex align-items-center flex-row">
-                      <img alt="logo" class="w-10 me-3 mb-0" src="../assert/img/logos/visa.png">
+                      <img alt="logo" class="w-10 me-3 mb-0" src="img/logos/visa.png">
                       <h6 class="mb-0">****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;7852</h6>
                       <i class="material-icons ms-auto text-dark cursor-pointer" data-bs-placement="top"
                          data-bs-toggle="tooltip" title="Edit Card">edit</i>
@@ -1046,4 +1039,11 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/material-dashboard.min.js?v=3.0.4"></script>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/42d5adcbca.js"></script>
+<script src="js/core/popper.min.js"></script>
+<script src="js/core/bootstrap.min.js"></script>
+<script src="js/plugins/perfect-scrollbar.min.js"></script>
+<script src="js/plugins/smooth-scrollbar.min.js"></script>
 </html>
