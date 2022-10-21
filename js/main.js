@@ -16,7 +16,7 @@ $('#submit_btn').click(function () {
          document.getElementById('system').style.display = "block";
        }
       },
-      error:function (err){
+      error:function (){
         $('#toast_warning_body').text("some error with login api from server");
         new bootstrap.Toast($('#dangerToast')).show();
       }
