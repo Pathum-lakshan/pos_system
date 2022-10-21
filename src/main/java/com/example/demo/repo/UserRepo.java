@@ -15,5 +15,5 @@ import org.springframework.data.jpa.repository.Query;
  */
 public interface UserRepo extends JpaRepository<User,Integer> {
   @Query(value = "SELECT * FROM user WHERE name LIKE ?1% AND password=?2",nativeQuery = true)
-  User getUserByUsername(String username , String password);
+  User isUserExists(String username , String password);
 }

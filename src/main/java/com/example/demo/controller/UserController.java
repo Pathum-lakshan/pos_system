@@ -15,7 +15,7 @@ public class UserController {
     private UserService userService;
 
   @GetMapping("/login")
-  public UserDTO testRequestParams (@RequestParam(value = "username",required = false) String username , @RequestParam(value = "password",required = false) String password){
+  public UserDTO isUserExists (@RequestParam(value = "username",required = false) String username , @RequestParam(value = "password",required = false) String password){
     return userService.isUserExists(username,password);
   }
 }
