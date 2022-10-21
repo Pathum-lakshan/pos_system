@@ -7,11 +7,18 @@ $('#submit_btn').click(function () {
         username:$('#username').val(),
         password:$('#password').val()
       },
-      success:function (result){
-        console.log(result)
+      success:function (user){
+       if (user.id===0){
+         $('#toast_warning_body').text("username or password incorrect");
+         new bootstrap.Toast($('#dangerToast')).show();
+       }else {
+         document.getElementById('login').style.display = "none";
+         document.getElementById('system').style.display = "block";
+       }
       },
       error:function (err){
-        console.log(err)
+        $('#toast_warning_body').text("some error with login api from server");
+        new bootstrap.Toast($('#dangerToast')).show();
       }
     })
   })

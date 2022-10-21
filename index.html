@@ -15,7 +15,7 @@
 </head>
 
 <body  class="g-sidenav-show  bg-gray-100 ">
-<section class="vh-100 " style="display: none" id="login">
+<section class="vh-100 " style="display: block" id="login">
   <div class="container py-5 h-100" id="rm">
     <div class="row d-flex align-items-center justify-content-center h-100">
       <div class="col-md-8 col-lg-7 col-xl-6">
@@ -45,7 +45,7 @@
     </div>
   </div>
 </section>
-<section   style="display: block" id="system">
+<section   style="display: none" id="system">
   <aside
     class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark"
     id="sidenav-main">
@@ -176,8 +176,8 @@
     </div>
   </aside>
   <main class="main-content border-radius-lg  ">
-    <nav class="navbar     navbar-main navbar-dark bg-gradient-dark navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl z-index-0"
-         id="navbarBlur">
+    <nav class="navbar     navbar-main navbar-dark bg-gradient-dark navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl"
+         id="navbarBlur" style="position: fixed ; width: 83%; z-index: 3">
       <div class="container-fluid py-1 px-3">
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -998,37 +998,37 @@
       </section>
     </main>
   </main>
-  <div class="position-fixed bottom-1 end-1 z-index-2">
-    <div class="toast fade hide p-2 bg-white" role="alert" aria-live="assertive" id="successToast" aria-atomic="true">
-      <div class="toast-header border-0">
-        <i class="material-icons text-success me-2">
-          verified
-        </i>
-        <span class="me-auto font-weight-bold">Success </span>
-        <small class="text-body">just now</small>
-        <i class="fas fa-times text-md ms-3 cursor-pointer" data-bs-dismiss="toast" aria-label="Close"></i>
-      </div>
-      <hr class="horizontal dark m-0">
-      <div class="toast-body" id="toast_success_body">
-
-      </div>
+</section>
+<div class="position-fixed bottom-1 end-1 z-index-2">
+  <div class="toast fade hide p-2 bg-white" role="alert" aria-live="assertive" id="successToast" aria-atomic="true">
+    <div class="toast-header border-0">
+      <i class="material-icons text-success me-2">
+        verified
+      </i>
+      <span class="me-auto font-weight-bold">Success </span>
+      <small class="text-body">just now</small>
+      <i class="fas fa-times text-md ms-3 cursor-pointer" data-bs-dismiss="toast" aria-label="Close"></i>
     </div>
+    <hr class="horizontal dark m-0">
+    <div class="toast-body" id="toast_success_body">
 
-    <div class="toast fade hide p-2 mt-2 bg-white" role="alert" aria-live="assertive" id="dangerToast" aria-atomic="true">
-      <div class="toast-header border-0">
-        <i class="material-icons text-danger me-2">
-          report_problem
-        </i>
-        <span class="me-auto text-gradient text-danger font-weight-bold">Warning</span>
-        <small class="text-body">just now</small>
-        <i class="fas fa-times text-md ms-3 cursor-pointer" data-bs-dismiss="toast" aria-label="Close"></i>
-      </div>
-      <hr class="horizontal dark m-0">
-      <div class="toast-body" id="toast_warning_body">
-      </div>
     </div>
   </div>
-</section>
+
+  <div class="toast fade hide p-2 mt-2 bg-white" role="alert" aria-live="assertive" id="dangerToast" aria-atomic="true">
+    <div class="toast-header border-0">
+      <i class="material-icons text-danger me-2">
+        report_problem
+      </i>
+      <span class="me-auto text-gradient text-danger font-weight-bold">Warning</span>
+      <small class="text-body">just now</small>
+      <i class="fas fa-times text-md ms-3 cursor-pointer" data-bs-dismiss="toast" aria-label="Close"></i>
+    </div>
+    <hr class="horizontal dark m-0">
+    <div class="toast-body" id="toast_warning_body">
+    </div>
+  </div>
+</div>
 </body>
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
