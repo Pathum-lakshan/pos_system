@@ -15,6 +15,7 @@ import java.util.List;
  * com.example.demo.entity
  * Customers
  */
+
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
