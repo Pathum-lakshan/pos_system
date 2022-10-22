@@ -7,6 +7,7 @@ import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 /**
  * ALE IS TER
@@ -31,5 +32,8 @@ public class Orders {
   @ManyToOne
   @JoinColumn(name = "cus_id")
   private Customers customers;
+  @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+  @JoinColumn(name = "qty", referencedColumnName = "qty", nullable=false)
+  private List<Product> productList;
 
 }

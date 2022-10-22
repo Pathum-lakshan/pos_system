@@ -30,5 +30,6 @@ public class Product {
   private String name,category;
   private int qty;
   private double price;
-
+  @ManyToMany(mappedBy = "productList")
+  private List<Orders> ordersList;
 }
