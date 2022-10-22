@@ -6,3 +6,10 @@
 
  Product
  */
+var product = {
+  id: "",
+  name: "",
+  category: "",
+  qty: "",
+  price: ""
+}
