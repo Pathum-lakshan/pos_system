@@ -1,7 +1,10 @@
 package com.example.demo.entity;
 
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
 
 /**
  * ALE IS TER
@@ -11,7 +14,14 @@ import javax.persistence.ManyToOne;
  * com.example.demo.entity
  * OrderDetails
  */
+
+@Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class OrderDetails {
+  @Id
+  @GeneratedValue
   private int id;
   @ManyToOne
   @JoinColumn(name = "product_id")
