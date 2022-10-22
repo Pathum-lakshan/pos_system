@@ -32,8 +32,7 @@ public class Orders {
   @ManyToOne
   @JoinColumn(name = "cus_id")
   private Customers customers;
-  @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-  @JoinColumn(name = "qty", referencedColumnName = "qty", nullable=false)
-  private List<Product> productList;
+  @OneToMany(mappedBy = "orders")
+  private List<OrderDetails> orderDetailsList;
 
 }
