@@ -6,3 +6,10 @@
 
  Customer
  */
+var customer = {
+  id: "",
+  name: "",
+  address: "",
+  contact: "",
+  idNumber: ""
+}
