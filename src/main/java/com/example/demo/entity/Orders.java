@@ -3,6 +3,7 @@ package com.example.demo.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -23,10 +24,12 @@ public class Orders {
   @Id
   @GeneratedValue
   private int order_id;
+  @CreationTimestamp
   private Date order_date;
   private int total_qty;
   private double total_amount;
   @ManyToOne
-  @JoinColumn(name="cus_id")
+  @JoinColumn(name = "cus_id")
   private Customers customers;
+
 }
