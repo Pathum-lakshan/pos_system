@@ -15,7 +15,7 @@
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="Hibernate" />
         <datasource-mapping>
-          <factory-entry name="pos-system" />
+          <factory-entry name="pos-system" value="ea526834-6fd1-48de-95ae-db42b7fda6be" />
         </datasource-mapping>
         <naming-strategy-map />
       </configuration>
