@@ -6,3 +6,6 @@
 
  ProductController
  */
+$("#add_product_btn").click(function (event) {
+
+});
