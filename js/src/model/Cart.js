@@ -7,7 +7,7 @@
  Cart
 
  */
-var cart = {
+const cart = {
   product: "",
   customer: "",
   qty: ""

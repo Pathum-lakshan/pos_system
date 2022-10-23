@@ -6,7 +6,7 @@
 
  Customer
  */
-var customer = {
+const customer = {
   id: "",
   name: "",
   address: "",

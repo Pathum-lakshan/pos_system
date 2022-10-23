@@ -6,7 +6,7 @@
 
  Product
  */
-var product = {
+const product = {
   id: "",
   name: "",
   category: "",
