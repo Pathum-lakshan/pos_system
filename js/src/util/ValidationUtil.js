@@ -6,3 +6,6 @@
 
  ValidationUtil
  */
+function validate(regex,data) {
+  return  data.match(regex);
+}
