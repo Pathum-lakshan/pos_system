@@ -7,7 +7,7 @@
  Cart
  */
 var cart = {
-  product: product,
-  customer: customer,
-  qty: qty
+  product: "",
+  customer: "",
+  qty: ""
 };
