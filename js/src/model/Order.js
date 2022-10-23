@@ -6,3 +6,12 @@
 
  Order
  */
+const order = {
+  oid:"",
+  carts: "",
+  customer: "",
+  totalAmount:"",
+  payment:"",
+  totalQty:""
+
+};
