@@ -13,5 +13,4 @@ const order = {
   totalAmount:"",
   payment:"",
   totalQty:""
-
 };
