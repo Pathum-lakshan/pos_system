@@ -11,18 +11,19 @@ $("#add_product_btn").click(function (event) {
 
   //console.log(validateFunction( /^[A-z ]{5,20}$/,));
 
-    //get posted resource name value
-    const inputString = $('#product_name').val();
-    //should be in the word\word\word format
-    const pattern =/^ [0 - 9]{0,10}$/;
-console.log(pattern.test(inputString))
-    //If the inputString is NOT a match
-    if (!pattern.test(inputString)) {
-     console.log("kk")
-    }
-    else
-    {
-console.log("ss")
-    }
+  const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+  if ($('#product_name').val().match(validRegex)) {
+
+    console.log("Valid email address!");
+
+
+
+  } else {
+
+   console.log("Invalid email address!");
+
+
+  }
 
 });
