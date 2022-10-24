@@ -22,5 +22,14 @@ $("#add_product_btn").click(function (event) {
 });
 
 $('#product_name').keyup(function () {
-  console.log($('#product_name').val())
+  const validRegex = /^[a-zA-Z0-9]*$/;
+  var myElement = document.getElementById('product_name_label');
+
+  if ($('#product_name').val().match(validRegex)) {
+
+    document.getElementById("product_name_label").style.color = "green";
+
+  } else {
+    document.getElementById("product_name_label").style.color = "red";
+  }
 });
