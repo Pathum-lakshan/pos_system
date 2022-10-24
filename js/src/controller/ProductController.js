@@ -9,6 +9,16 @@
 
 // product inputs validate
 
+    // product name
+
+
+
+
+
+
+
+
+
 
 $("#add_product_btn").click(function (event) {
 //  productSave($('#next_product_id').text(), $('#product_name').val(), $('#product_category').val(), $('#product_qty').val(), $('#product_price').val());
