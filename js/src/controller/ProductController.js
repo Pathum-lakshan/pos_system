@@ -11,14 +11,17 @@
 
     // product name
 
+let productNameIsValidate=true;
 
 $('#product_name').keyup(function () {
   const validRegex = /^[a-zA-Z0-9]*$/;
   let productName = $('#product_name').val();
   if (productName.match(validRegex)) {
     document.getElementById("product_name_label").style.color = "#00CB39";
+    productNameIsValidate=true;
   } else {
     document.getElementById("product_name_label").style.color = "red";
+    productNameIsValidate=false;
   }
   if (productName===""){
     $("#product_name_label").removeAttr("style");
