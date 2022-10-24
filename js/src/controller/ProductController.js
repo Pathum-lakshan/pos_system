@@ -22,8 +22,6 @@ $("#add_product_btn").click(function (event) {
   } else {
 
    console.log("Invalid email address!");
-
-
   }
 
 });
