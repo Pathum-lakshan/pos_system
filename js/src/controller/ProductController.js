@@ -23,13 +23,15 @@ $("#add_product_btn").click(function (event) {
 
 $('#product_name').keyup(function () {
   const validRegex = /^[a-zA-Z0-9]*$/;
-  var myElement = document.getElementById('product_name_label');
-
-  if ($('#product_name').val().match(validRegex)) {
+  let productName = $('#product_name').val();
+  if (productName.match(validRegex)) {
 
     document.getElementById("product_name_label").style.color = "green";
 
   } else {
     document.getElementById("product_name_label").style.color = "red";
+  }
+  if (productName===""){
+    console.log("empty")
   }
 });
