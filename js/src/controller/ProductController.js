@@ -14,7 +14,7 @@
 let productNameIsValidate=true;
 
 $('#product_name').keyup(function () {
-  const validRegex = /^[a-zA-Z0-9]*$/;
+  const validRegex = /^[a-zA-Z0-9 ]*$/;
   let productName = $('#product_name').val();
   if (productName.match(validRegex)) {
     document.getElementById("product_name_label").style.color = "#00CB39";
@@ -27,6 +27,8 @@ $('#product_name').keyup(function () {
     $("#product_name_label").removeAttr("style");
   }
 });
+
+    // product category
 
 
 
