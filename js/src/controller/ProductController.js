@@ -32,6 +32,6 @@ $('#product_name').keyup(function () {
     document.getElementById("product_name_label").style.color = "red";
   }
   if (productName===""){
-    console.log("empty")
+    $("#product_name_label").removeAttr("style");
   }
 });
