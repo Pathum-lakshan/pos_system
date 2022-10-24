@@ -6,6 +6,6 @@
 
  ValidationUtil
  */
-function validate(regex,data) {
-  return  data.match(regex);
+function validateFunction(regex,data) {
+  return regex.test(data) ? true : false;
 }
