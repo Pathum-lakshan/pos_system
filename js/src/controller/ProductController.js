@@ -14,14 +14,13 @@ $("#add_product_btn").click(function (event) {
   const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
   if ($('#product_name').val().match(validRegex)) {
-
     console.log("Valid email address!");
-
-
-
   } else {
-
    console.log("Invalid email address!");
   }
 
+});
+
+$('#product_name').keyup(function () {
+  console.log($('#product_name').val())
 });
