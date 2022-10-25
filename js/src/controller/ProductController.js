@@ -27,7 +27,7 @@ $('#product_category').keyup(function () {
   productCategoryStatus=textValidator(/^[a-zA-Z0-9 ]{0,20}$/,$('#product_category').val(),document.getElementById("product_category_label"),$('#product_category_label'));
 });
 
-
+    // product qty
 
 $("#add_product_btn").click(function (event) {
 //  productSave($('#next_product_id').text(), $('#product_name').val(), $('#product_category').val(), $('#product_qty').val(), $('#product_price').val());
