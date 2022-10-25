@@ -6,6 +6,20 @@
 
  ValidationUtil
  */
-function validateFunction(regex,data) {
-  return regex.test(data) ? true : false;
+
+
+function textValidator(regex, value, element, normalize) {
+  let status;
+  if (value.match(regex)){
+    element.style.color = "#00CB39";
+    status=true;
+  }else {
+    element.style.color = "red";
+    status=false;
+  }
+  if (value===""){
+    normalize.removeAttr("style");
+    status=false;
+  }
+  return status;
 }

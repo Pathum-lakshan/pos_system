@@ -7,6 +7,7 @@
  ProductController
  */
 
+
 // product inputs validate
 
 let productNameStatus=true;
@@ -40,21 +41,6 @@ $('#product_category').keyup(function () {
 
 });
 
-function textValidator(regex, value, element, normalize) {
-  let status;
-  if (value.match(regex)){
-    element.style.color = "#00CB39";
-    status=true;
-  }else {
-    element.style.color = "red";
-    status=false;
-  }
-  if (value===""){
-    normalize.removeAttr("style");
-    status=false;
-  }
-  return status;
-}
 
 
 $("#add_product_btn").click(function (event) {
