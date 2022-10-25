@@ -23,22 +23,8 @@ $('#product_name').keyup(function () {
 
     // product category
 
-
-
 $('#product_category').keyup(function () {
-  const validRegex = /^[a-zA-Z]{0,20}$/;
-  let productCategory = $('#product_category').val();
-  if (productCategory.match(validRegex)) {
-    document.getElementById("product_name_label").style.color = "#00CB39";
-    productNameIsValidate=true;
-  } else {
-    document.getElementById("product_name_label").style.color = "red";
-    productNameIsValidate=false;
-  }
-  if (productCategory===""){
-    $("#product_name_label").removeAttr("style");
-  }
-
+  productCategoryStatus=textValidator(/^[a-zA-Z0-9 ]{0,20}$/,$('#product_category').val(),document.getElementById("product_category_label"),$('#product_category_label'));
 });
 
 
