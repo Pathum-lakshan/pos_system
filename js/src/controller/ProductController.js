@@ -9,21 +9,20 @@
 
 // product inputs validate
 
-    // product name
-
 let productNameStatus=true;
 let productCategoryStatus=true;
 let productQtyStatus=true;
 let productPriceStatus=true;
 
+    // product name
+
 $('#product_name').keyup(function () {
- productNameStatus= validator(/^[a-zA-Z0-9 ]*$/,$('#product_name').val(),document.getElementById("product_name_label"),$('#product_name_label'));
+ productNameStatus= textValidator(/^[a-zA-Z0-9 ]*$/,$('#product_name').val(),document.getElementById("product_name_label"),$('#product_name_label'));
 });
 
     // product category
 
 
-let productCategoryIsValidate=true;
 
 $('#product_category').keyup(function () {
   const validRegex = /^[a-zA-Z]{0,20}$/;
@@ -41,7 +40,7 @@ $('#product_category').keyup(function () {
 
 });
 
-function validator(regex,value,element,normalize) {
+function textValidator(regex, value, element, normalize) {
   let status;
   if (value.match(regex)){
     element.style.color = "#00CB39";
