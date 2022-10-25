@@ -23,3 +23,8 @@ function textValidator(regex, value, element, normalize) {
   }
   return status;
 }
+
+function warningToast(bodyText) {
+  $('#toast_warning_body').text(bodyText);
+  new bootstrap.Toast($('#dangerToast')).show();
+}
