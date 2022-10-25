@@ -51,7 +51,7 @@ $('#product_category').keyup(function () {
 });
 
 function validator(regex,value,element) {
-
+  if (value.match(regex)){}
 }
 
 
