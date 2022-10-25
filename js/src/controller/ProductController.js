@@ -30,10 +30,14 @@ $('#product_category').keyup(function () {
     // product qty
 
 $('#product_qty').keyup(function () {
-  productCategoryStatus=textValidator(/^[0-9]{0,4}$/,$('#product_qty').val(),document.getElementById("product_qty_label"),$('#product_qty_label'));
+  productQtyStatus=textValidator(/^[0-9]{0,4}$/,$('#product_qty').val(),document.getElementById("product_qty_label"),$('#product_qty_label'));
 });
 
+    // product price
 
+$('#product_price').keyup(function () {
+  productPriceStatus=textValidator(/^[0-9]{0,4}.[0-9]{2}$/,$('#product_price').val(),document.getElementById("product_price_label"),$('#product_price_label'));
+});
 
 $("#add_product_btn").click(function (event) {
 //  productSave($('#next_product_id').text(), $('#product_name').val(), $('#product_category').val(), $('#product_qty').val(), $('#product_price').val());
