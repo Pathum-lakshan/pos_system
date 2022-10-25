@@ -51,7 +51,12 @@ $('#product_category').keyup(function () {
 });
 
 function validator(regex,value,element) {
-  if (value.match(regex)){}
+  if (value.match(regex)){
+    element.style.color = "#00CB39";
+  }else {
+    element.style.color = "red";
+  }
+
 }
 
 
