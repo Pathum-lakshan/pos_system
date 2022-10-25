@@ -11,21 +11,13 @@
 
     // product name
 
-let productNameIsValidate=true;
+let productNameStatus=true;
+let productCategoryStatus=true;
+let productQtyStatus=true;
+let productPriceStatus=true;
 
 $('#product_name').keyup(function () {
-  const validRegex = /^[a-zA-Z0-9 ]*$/;
-  let productName = $('#product_name').val();
-  if (productName.match(validRegex)) {
-    document.getElementById("product_name_label").style.color = "#00CB39";
-    productNameIsValidate=true;
-  } else {
-    document.getElementById("product_name_label").style.color = "red";
-    productNameIsValidate=false;
-  }
-  if (productName===""){
-    $("#product_name_label").removeAttr("style");
-  }
+ productNameStatus= validator(/^[a-zA-Z0-9 ]*$/,$('#product_name').val(),document.getElementById("product_name_label"),$('#product_name_label'));
 });
 
     // product category
@@ -43,20 +35,26 @@ $('#product_category').keyup(function () {
     document.getElementById("product_name_label").style.color = "red";
     productNameIsValidate=false;
   }
-  if (productName===""){
+  if (productCategory===""){
     $("#product_name_label").removeAttr("style");
   }
 
-
 });
 
-function validator(regex,value,element) {
+function validator(regex,value,element,normalize) {
+  let status;
   if (value.match(regex)){
     element.style.color = "#00CB39";
+    status=true;
   }else {
     element.style.color = "red";
+    status=false;
   }
-
+  if (value===""){
+    normalize.removeAttr("style");
+    status=false;
+  }
+  return status;
 }
 
 
