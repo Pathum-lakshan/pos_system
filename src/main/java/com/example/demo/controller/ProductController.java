@@ -1,8 +1,10 @@
 package com.example.demo.controller;
 
+
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 
 /**
  * ALE IS TER
@@ -13,9 +15,11 @@ import org.springframework.web.bind.annotation.RestController;
  * ProductController
  */
 
+
 @RestController
 @RequestMapping(value = "api/v1/product")
 @CrossOrigin
+
 public class ProductController {
 
 }
