@@ -1,7 +1,9 @@
 package com.example.demo.service;
 
+import com.example.demo.dto.ProductDTO;
+import com.example.demo.entity.Product;
 import com.example.demo.repo.ProductRepo;
-import com.example.demo.repo.UserRepo;
+
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,4 +26,7 @@ public class ProductService {
   @Autowired
   private ModelMapper modelMapper;
 
+  public boolean saveProduct(ProductDTO productDTO){
+    return productRepo.save(modelMapper.map(productDTO, Product.class)) != null;
+  }
 }
