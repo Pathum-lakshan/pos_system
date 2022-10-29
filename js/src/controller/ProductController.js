@@ -40,18 +40,14 @@ $('#product_price').keyup(function () {
 });
 
 
-function product() {
-  return  {
-    product_id: $('#next_product_id').text(),
+
+function saveProduct() {
+  axios.post('http://localhost:8080/api/v1/product/save', {
     name: $('#product_name').val(),
     category: $('#product_category').val(),
     qty: $('#product_qty').val(),
     price: $('#product_price').val()
-  }
-
-}
-function saveProduct() {
-  axios.post('http://localhost:8080/api/v1/product/save', product())
+  })
     .then((response) => {
       console.log(response);
     }, (error) => {
