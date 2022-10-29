@@ -51,7 +51,21 @@ function product() {
 
 }
 function saveProduct() {
-  console.log(product())
+  console.log(product());
+
+
+  axios.post('http://localhost:8080/api/v1/product/save', {
+    "id":2,
+    "name":"test product",
+    "category":"test category",
+    "qty":22,
+    "price":33.88
+  })
+    .then((response) => {
+      console.log(response);
+    }, (error) => {
+      console.log(error);
+    });
 }
 $("#add_product_btn").click(function (event) {
   if (productNameStatus){
