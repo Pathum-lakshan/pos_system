@@ -39,13 +39,47 @@ $('#product_price').keyup(function () {
   productPriceStatus=textValidator(/^[0-9]{0,4}.[0-9]{2}$/,$('#product_price').val(),document.getElementById("product_price_label"),$('#product_price_label'));
 });
 
+
+function product() {
+  return  {
+    product_id: $('#next_product_id').text(),
+    name: $('#product_name').val(),
+    category: $('#product_category').val(),
+    qty: $('#product_qty').val(),
+    price: $('#product_price').val()
+  }
+
+}
+function saveProduct() {
+  console.log(product())
+  $(document).ready(function () {
+    $.ajax({
+      url:"http://localhost:8080/api/v1/product/save",
+      type:"GET",
+      data : product(),
+      success:function (status){
+        if (status){
+          $('#toast_success_body').text("Successfully save product");
+          new bootstrap.Toast($('#successToast')).show();
+        }else {
+          $('#toast_warning_body').text("UnSuccessfully save product");
+          new bootstrap.Toast($('#dangerToast')).show();
+        }
+      },
+      error:function (){
+        $('#toast_warning_body').text("some error with product save api from server");
+        new bootstrap.Toast($('#dangerToast')).show();
+      }
+    })
+  });
+}
 $("#add_product_btn").click(function (event) {
 //  productSave($('#next_product_id').text(), $('#product_name').val(), $('#product_category').val(), $('#product_qty').val(), $('#product_price').val());
   if (productNameStatus){
       if (productCategoryStatus){
           if (productQtyStatus){
               if (productPriceStatus){
-
+                saveProduct();
               }else {
                 warningToast("please check product price again ...");
               }

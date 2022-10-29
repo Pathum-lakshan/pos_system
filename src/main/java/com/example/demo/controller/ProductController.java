@@ -27,6 +27,7 @@ public class ProductController {
   private ProductService productService;
   @PostMapping("/save")
   public boolean save(@RequestBody ProductDTO productDTO){
+    System.out.println(productDTO);
     return productService.saveProduct(productDTO);
   }
 }
