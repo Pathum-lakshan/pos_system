@@ -49,7 +49,9 @@ function saveProduct() {
     price: $('#product_price').val()
   })
     .then((response) => {
-      console.log(response);
+      if (response.data){
+
+      }
     }, (error) => {
       console.log(error);
     });
