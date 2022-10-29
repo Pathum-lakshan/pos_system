@@ -55,7 +55,7 @@ function saveProduct() {
         warningToast("UnSuccessfully save product in database");
       }
     }, (error) => {
-      console.log(error);
+      warningToast(error.message);
     });
 }
 $("#add_product_btn").click(function (event) {
