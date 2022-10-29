@@ -28,3 +28,7 @@ function warningToast(bodyText) {
   $('#toast_warning_body').text(bodyText);
   new bootstrap.Toast($('#dangerToast')).show();
 }
+function successToast(bodyText) {
+  $('#toast_success_body').text(bodyText);
+  new bootstrap.Toast($('#successToast')).show();
+}

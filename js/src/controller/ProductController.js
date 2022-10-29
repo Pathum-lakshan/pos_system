@@ -50,7 +50,9 @@ function saveProduct() {
   })
     .then((response) => {
       if (response.data){
-
+       successToast("Successfully save product in database")
+      }else{
+        warningToast("UnSuccessfully save product in database");
       }
     }, (error) => {
       console.log(error);
