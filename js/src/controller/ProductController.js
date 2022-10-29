@@ -39,7 +39,7 @@ $('#product_price').keyup(function () {
   productPriceStatus=textValidator(/^[0-9]{0,4}.[0-9]{2}$/,$('#product_price').val(),document.getElementById("product_price_label"),$('#product_price_label'));
 });
 
-
+// save product call api
 
 function saveProduct() {
   axios.post('http://localhost:8080/api/v1/product/save', {
@@ -55,9 +55,12 @@ function saveProduct() {
         warningToast("UnSuccessfully save product in database");
       }
     }, (error) => {
-      console.log(error);
+      warningToast(error.message);
     });
 }
+
+// product btn validate
+
 $("#add_product_btn").click(function (event) {
   if (productNameStatus){
       if (productCategoryStatus){
@@ -77,5 +80,3 @@ $("#add_product_btn").click(function (event) {
     warningToast("please check product name again ...");
   }
 });
-
-
