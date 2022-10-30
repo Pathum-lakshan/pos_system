@@ -33,3 +33,10 @@ function successToast(bodyText) {
   $('#toast_success_body').text(bodyText);
   new bootstrap.Toast($('#successToast')).show();
 }
+
+
+function clearFields(...fields){
+  for (const field of fields) {
+    console.log(field);
+  }
+}

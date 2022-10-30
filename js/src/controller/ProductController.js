@@ -51,7 +51,7 @@ function saveProduct() {
     .then((response) => {
       if (response.data){
        successToast("Successfully save product in database");
-
+        clearFields();
       }else{
         warningToast("UnSuccessfully save product in database");
       }
@@ -83,4 +83,5 @@ $("#add_product_btn").click(function (event) {
 });
 
 // clear fields
+
 
