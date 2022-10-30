@@ -82,3 +82,6 @@ $("#add_product_btn").click(function (event) {
     warningToast("please check product name again ...");
   }
 });
+
+
+
