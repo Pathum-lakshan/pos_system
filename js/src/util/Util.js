@@ -37,6 +37,13 @@ function successToast(bodyText) {
 
 function clearFields(...fields){
   for (const field of fields) {
-    console.log(field);
+    field.val('');
+    field.removeAttr("style");
+  }
+}
+
+function removeStyleFields(...fields){
+  for (const field of fields) {
+    field.removeAttr("style");
   }
 }
