@@ -51,7 +51,8 @@ function saveProduct() {
     .then((response) => {
       if (response.data){
        successToast("Successfully save product in database");
-        clearFields();
+        clearFields($('#product_name'), $('#product_category'), $('#product_qty'),$('#product_price'));
+        removeStyleFields($('#product_name_label'),$('#product_category_label'),$('#product_qty_label'),$('#product_price_label'));
       }else{
         warningToast("UnSuccessfully save product in database");
       }
@@ -82,6 +83,5 @@ $("#add_product_btn").click(function (event) {
   }
 });
 
-// clear fields
 
 
